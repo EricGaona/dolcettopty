@@ -2,7 +2,7 @@ body {
     font-family: Arial;
     padding-top: 100px;
     background-color: #E6D1D0;
-    background-image: url("{{ MEDIA_URL }}img/id1.png");
+    /* background-image: url("{{ MEDIA_URL }}img/id1.png"); */
     font-size: 16px;
 }
 
