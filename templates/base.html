@@ -49,7 +49,7 @@
                     <li><a href="{% url 'registration' %}"><i class="fa fa-user-plus"></i> Register</a></li>
                     {% endif %}
                     <li>
-                        <a href="#">
+                        <a href="{% url 'view_cart' %}">
                             <i class="fa fa-shopping-cart"></i> Cart
                             {% if product_count > 0 %}
                             <label class="badge badge-warning">{{ product_count }}</label>
@@ -57,7 +57,7 @@
                         </a>
                     </li>
                     <li>
-                    <form action="#" method="get">
+                    <form action="{% url 'search' %}" method="get">
                        <input type="text" name="q">
                        <button type="search"><i class="fa fa-search"></i></button>
                     </form>
