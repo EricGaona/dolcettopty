@@ -1,6 +1,9 @@
 body {
     font-family: Arial;
     padding-top: 100px;
+    background-color: #E6D1D0;
+    background-image: url("{{ MEDIA_URL }}img/id1.png");
+    font-size: 16px;
 }
 
 footer {
@@ -9,6 +12,7 @@ footer {
     padding-bottom: 20px;
     border-top: 1px solid #ededed;
     color: #A9A9A9;
+    text-align: center;    
 }
 
 .icon-bar {
@@ -64,3 +68,36 @@ caption p {
 .product-description {
     min-height: 40px;
 }
+
+/* ----------------------    ESTO ES DE LA BARRA DE NAVEGACION    ------------------------------- */
+
+.navbar{
+    background-color:#DBB0B7 ;
+    background-image: -webkit-linear-gradient(#DBB0B7 ,#DBB0B7  60%,#DBB0B7 );    
+}
+.navbar-default {
+    background-color: #DBB0B7 ;
+    border-color: #DBB0B7 ;
+    padding: 5px;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #ffffff;
+    background-color: #D495A0;
+}
+.navbar-right {   
+    margin-right: 0;
+}
+.navbar-brand {    
+    padding: 0px 15px;   
+}
+
+button, input, optgroup, select, textarea {   
+    margin: 10px 0px 0px 5px ;
+}
+/*
+colores de la pagina
+logo = #D495A0
+otro = #D2909C
+otro = #DBB0B7
+otro = #E6D1D0 
+*/

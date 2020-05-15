@@ -5,15 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ecommerce</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <title>Dolcettopty</title>      
+       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  
+   
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    {% block head_js %}
-    {% endblock head_js %}
+    <!-- <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}"> -->
+   
+    {% block head_js %} 
+    {% endblock %}
+    
 </head>
 
 <body>
@@ -27,7 +33,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Ecommerce</a>
+                <a class="navbar-brand" href="/">
+                    <img src="{{ MEDIA_URL }}img/logo.png" alt="Generic placeholder image">
+                </a>
+
+                
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -39,14 +49,21 @@
                     <li><a href="{% url 'registration' %}"><i class="fa fa-user-plus"></i> Register</a></li>
                     {% endif %}
                     <li>
-                        <a href="{% url 'view_cart' %}">
+                        <a href="#">
                             <i class="fa fa-shopping-cart"></i> Cart
                             {% if product_count > 0 %}
                             <label class="badge badge-warning">{{ product_count }}</label>
                             {% endif %}
                         </a>
                     </li>
+                    <li>
+                    <form action="#" method="get">
+                       <input type="text" name="q">
+                       <button type="search"><i class="fa fa-search"></i></button>
+                    </form>
+                    </li>
                 </ul>
+                
             </div>
         </div>
     </nav>
@@ -59,21 +76,39 @@
         </div>
     </div>
     {% endif %}
-    <div class="container">
+    <!-- <div class="container">
         <div class="display">
-            <form action="{% url 'search' %}" method="get">
-                <input type="text" name="q">
-                <button type="search">Search</button>
-            </form>
+            
         </div>
-        {% block content %} {% endblock %}
-    </div>
-    
+        
+    </div> -->
+
+
+    <div class="container">
+    {% block content %}          
+    {% endblock %}
+    </div> 
+
+
     <footer>
-        <div class="container">
-            <p>Made by Code Institute bootcampers</p>
+        <div class="container">          
+              <div class="row featurette">      
+                <div class="col-sm-4 col-md-4">
+                    <p>Made by Code Institute bootcampers_1</p>
+                </div>    
+                 <div class="col-sm-4 col-md-4">
+                    <p>Made by Code Institute bootcampers_2</p>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <p>Made by Code Institute bootcampers_3</p>
+                </div>           
+            </div>       
         </div>
     </footer>
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
