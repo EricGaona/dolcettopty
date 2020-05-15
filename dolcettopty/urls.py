@@ -20,12 +20,13 @@ from home import urls as urls_home
 from home.views import index
 from django.views import static  
 from .settings import MEDIA_ROOT
-
+from products import urls as urls_products
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),    
     url(r'^$', index, name='index'),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^home/', include(urls_home)),   
+    url(r'^products/', include(urls_products)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}), 
 ]
